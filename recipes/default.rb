@@ -1,0 +1,21 @@
+user_account 'bklang' do
+  comment 'Ben Klang'
+  ssh_keys [
+    'ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAgEA0Civ5gd2xtXIMR8rtJcilfnjSLCUL7qoT0md/jccr9oeQgPfFlriSKDVJSPmCrT5VagbMoljgprThIGJk/Qgd1qRcuFkpqYsqnZdcOzhl7hgHeroRny7+JRARDDERHxPsXLF2XR5DPKsEsousj/YAWwdQIGn//87nAsMuerLS5kYorNvWKcjfko3qEGLGRXGYLJKi884PflnmFSkaLWg/Rr/8IAGwy1hkItBzurL8KPD1A7uvNNMy1ykTQ9coCBenAi+X8JaZhUGjsTACbAotphwlHfEzCJXyFLpRgxELeLT49eSzARPpBTj1oZAI0KOm5M50cMgLcS8ox4gyIOVL0KJqMa0dXacWZdoUFXY9S9IMoVxg9x6hl7tnltJNwwKgHhc/IBORtT0lEURZY/SVZmn2z+BD6ZkzsFxjSaoJqur8QrY+lW95czTtXPvQn1TsRjEx0Kj8A2GnWY/grvmJElNgzPk0stGBSafWKHM10S11mLzMStxmG367j6aMxl721DBGBRR4PXLw/KI+rH2cEzehf4rdiFcN2XLYpN5NAIDeJjq4RtSuBe3hEKmcKs6ihLACsAkRAtnwv7BgmWAxpVrtgA8hhB5q4iYEFLhqGfYjKS+JQS6vUKOXXvthHFcHw4hVSkmdW/N+P5ZUVSTf1rF5KjFFSvTvuWS7c/Ox50= bklang@mojolingo.com'
+  ]
+  create_group true
+  password '$1$LN9z3ls1$ltGog48mKQ6MI33oqpksX0'
+end
+
+user_account 'blangfeld' do
+  comment 'Ben Langfeld'
+  ssh_keys [
+    'ssh-dss AAAAB3NzaC1kc3MAAACBAJ3kYCd3z/SLpc5LOxYSVa6a4qoJxzds6Az6Wl6CcLNg+OwdqIQnSQg6XB3t1ASA7gL1X5KM5VHgzszZMkVLwNKq/PgKthyfDn4VsSO0+3lWNpX+EvfT1/szQ0gDD4fydWAY4sIxdb2M078o9TgipQFCMXeZW5JgqQ4Fj11LjnxrAAAAFQC8OZ2qaJwxdMQ7HU7XBk/mgkWJzwAAAIEAh50F32NBmaOLbcGAT7aJJsSEfEKPZhVojyEVBHikmQUOJF3EUuSBQj01QGuBXUpxkf2Be+ElqwukEUQiUQuPBEG15gsY0guVIlGBrptJ9UB2UCQiD9SFcMHtCfTKVRJqA8iyqTKJBQiCIVaWmfTg8vvDcKac5opY6Lmx0B88MM0AAACARv49XF7HAMtLru9T96FQgw0gGSJTit7ax1aJqHVBO6/n1UnJrzKD3fqviAwOeLLmgKc1xzDXLdBWn74OMwKdF/GgGcSP3Rn2oGGtXD+lXh4ZuIa6RBmZJDLlLQqFFaqaNEP6YWiPf0emE6HaBV3BOe9NgvCBZf+bCwbgbxDoYac= ben@Ben-Langfelds-MacBook.local'
+  ]
+  create_group true
+  password '$1$S8bnZAIv$Ddj/GsyoqW85W9TU8GpNN1'
+end
+
+group 'mojolingo' do
+  members %w(bklang blangfeld)
+end
